@@ -1,10 +1,15 @@
 # Niri window manager configuration
 # Configured for compatibility with Noctalia shell
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    inputs.niri.homeModules.config
+  ];
+
   programs.niri = {
     enable = true;
+    package = inputs.niri.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
     settings = {
       # Spawn Noctalia at startup

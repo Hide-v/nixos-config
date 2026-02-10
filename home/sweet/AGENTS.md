@@ -15,6 +15,7 @@ User environment configuration via Home Manager. Contains terminal (Kitty), shel
 | `fish.nix` | Fish shell: abbreviations, aliases, keybindings, init scripts |
 | `noctalia.nix` | Noctalia shell: bar, widgets, plugins, colors, systemd |
 | `opencode.nix` | OpenCode AI: main config + oh-my-opencode plugin |
+| `niri.nix` | Niri WM: keybindings, spawn-at-startup, compositor |
 
 ## KEY CONFIGS
 

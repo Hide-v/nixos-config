@@ -13,7 +13,7 @@ System configuration modules for the nixos host. Contains hardware-specific sett
 | `default.nix` | Host entry point, imports configuration.nix and niri.nix |
 | `configuration.nix` | Base system config: users, services, networking |
 | `hardware-configuration.nix` | Hardware-specific: filesystems, bootloader, modules |
-| `niri.nix` | Niri WM: keybindings, spawn-at-startup, compositor settings |
+| | |
 
 ## KEY CONFIGS
 

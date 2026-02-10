@@ -6,6 +6,5 @@
 {
   imports = [
     ./configuration.nix
-    ./niri.nix
   ];
 }

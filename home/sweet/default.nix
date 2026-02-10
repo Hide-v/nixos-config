@@ -19,7 +19,7 @@
     ./fish.nix
     ./noctalia.nix
     ./opencode.nix
-    inputs.niri.homeModules.niri
+    ./niri.nix
   ];
 
   # Packages to install

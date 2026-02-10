@@ -25,7 +25,7 @@ NixOS flake configuration with Home Manager, featuring Niri window manager + Noc
 | Task | Location | Notes |
 |------|----------|-------|
 | System configuration | `hosts/nixos/configuration.nix` | Base system, services, users |
-| Niri WM config | `hosts/nixos/niri.nix` | Keybindings, startup, compositor |
+| Niri WM config | `home/sweet/niri.nix` | Keybindings, startup, compositor |
 | Hardware config | `hosts/nixos/hardware-configuration.nix` | **Edit for your hardware** |
 | User packages | `home/sweet/default.nix` | CLI tools, dev tools |
 | Kitty terminal | `home/sweet/kitty.nix` | Terminal config, theme |
@@ -40,14 +40,14 @@ flake.nix
 ├── nixosConfigurations.nixos
 │   └── hosts/nixos/default.nix
 │       ├── configuration.nix (imports hardware-configuration.nix)
-│       └── niri.nix
+│   └── niri.nixosModules.niri (system-level installation)
 │   └── home-manager (home/sweet/)
 │       └── default.nix
 │           ├── kitty.nix
 │           ├── fish.nix
 │           ├── noctalia.nix
 │           ├── opencode.nix
-│           └── niri (inputs.niri.homeModules.niri)
+│           └── niri.nix (inputs.niri.homeModules.config)
 ```
 
 ## KEYBINDS (Niri)
