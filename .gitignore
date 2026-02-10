@@ -1,0 +1,40 @@
+# Nix
+*.swp
+*.swo
+~
+*.o
+*.so
+*.a
+*.lo
+*.la
+*.lai
+*.lmo
+*.relo
+*.rela
+*.mode1
+*.mode2
+*.class
+*.pyc
+*.pyo
+
+# Build artifacts
+result
+result-*
+.nix-defexpr
+.nix-profile/
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+*.bak
+*~
+
+# Local state
+.nix-state/
+.nix-store/
