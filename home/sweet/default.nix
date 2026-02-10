@@ -1,7 +1,7 @@
 # Home Manager configuration for user sweet
 # This file defines the user's home environment
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Home directory
@@ -19,6 +19,7 @@
     ./fish.nix
     ./noctalia.nix
     ./opencode.nix
+    inputs.niri.homeModules.niri
   ];
 
   # Packages to install
@@ -55,9 +56,6 @@
 
   # Programs configuration
   programs = {
-    # Neovim configuration
-    neovim.enable = true;
-
     # Git configuration
     git = {
       enable = true;

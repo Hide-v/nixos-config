@@ -61,24 +61,12 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  # Enable X11 window system.
-  services.xserver.enable = true;
-  services.xserver.layout = "us";
-
-  # Enable desktop environment (choose one or comment out unwanted)
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
   # Enable Bluetooth.
   hardware.bluetooth.enable = true;
 
   # Enable power management services required by Noctalia
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
-
-  # Disable default desktop environment (using Niri + Noctalia instead)
-  services.xserver.displayManager.gdm.enable = false;
-  services.xserver.desktopManager.gnome.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like database locations and

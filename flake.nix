@@ -18,9 +18,14 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, niri, ... } @ inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -33,10 +38,13 @@
           modules = [
             ./hosts/nixos
             home-manager.nixosModules.home-manager
+            niri.nixosModules.niri
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.sweet = import ./home/sweet;
+              home-manager.users.sweet = import ./home/sweet {
+                inherit inputs;
+              };
             }
           ];
         };
