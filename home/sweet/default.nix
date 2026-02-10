@@ -18,6 +18,7 @@
     ./kitty.nix
     ./fish.nix
     ./noctalia.nix
+    ./opencode.nix
   ];
 
   # Packages to install
