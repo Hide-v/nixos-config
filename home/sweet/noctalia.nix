@@ -1,12 +1,8 @@
 # Noctalia shell configuration module
 # Wayland desktop shell built with Quickshell
-{ config, pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
-  imports = [
-    inputs.noctalia.homeModules.default
-  ];
-
   programs.noctalia-shell = {
     enable = true;
 

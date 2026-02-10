@@ -1,7 +1,7 @@
 # Home Manager configuration for user sweet
 # This file defines the user's home environment
 
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   # Home directory

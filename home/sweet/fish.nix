@@ -13,7 +13,7 @@
 
     # Abbreviations
     abbreviations = {
-      lg = "lazygit"
+      lg = "lazygit";
       g = "git";
       ga = "git add";
       gc = "git commit";

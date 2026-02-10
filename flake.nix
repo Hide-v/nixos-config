@@ -25,7 +25,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, niri, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, noctalia, niri, ... } @ inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -37,15 +37,18 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/nixos
-            home-manager.nixosModules.home-manager
             niri.nixosModules.niri
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.sweet = import ./home/sweet {
-                inherit inputs;
-              };
-            }
+          ];
+        };
+      };
+
+      # Home Manager standalone configuration
+      homeManagerConfigurations = {
+        ${system} = {
+          pkgs = pkgs;
+          modules = [
+            noctalia.homeModules.default
+            ./home/sweet
           ];
         };
       };
